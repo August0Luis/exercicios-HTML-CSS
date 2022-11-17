@@ -13,6 +13,7 @@
 
         table {
             width: 500px;
+            position: relative;
             border-collapse: collapse;
         }
 
@@ -22,6 +23,12 @@
             padding: 10px;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: black;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
@@ -29,6 +36,10 @@
 
         td.num {
             text-align: right;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
         }
     </style>
 </head>
@@ -43,8 +54,10 @@
             Tfoot
                  tr, td, th
      -->
-    <h1>Tabela Grande</h1>
-    <table>
+    
+     <h1>Tabela Grande</h1>
+    <caption>População das Unidades Federativas</caption>
+     <table>
         <thead>
             <tr>
                 <th>Estado</th>
